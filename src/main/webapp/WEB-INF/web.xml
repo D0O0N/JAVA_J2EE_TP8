@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>Class1</servlet-name>
+        <servlet-class>TP_WEB.Class1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ShowClient</servlet-name>
+        <servlet-class>servlet.ShowClient</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ShowClients</servlet-name>
+        <servlet-class>TP_WEB.ShowClients</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ShowClientInState</servlet-name>
+        <servlet-class>TP_WEB.ShowClientInState</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Class1</servlet-name>
+        <url-pattern>/Class1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShowClient</servlet-name>
+        <url-pattern>/ShowClient</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShowClients</servlet-name>
+        <url-pattern>/ShowClients</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShowClientInState</servlet-name>
+        <url-pattern>/ShowClientInState</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
