@@ -35,6 +35,7 @@ public class ShowClientInState extends HttpServlet {
 			out.println("<title>Servlet ShowClient</title>");
 			out.println("</head>");
 			out.println("<body>");
+                        //out.println("<script >");
 			try {	// Trouver la valeur du paramètre HTTP customerID
 				String val = request.getParameter("state");
 				if (val == null) {
@@ -44,12 +45,22 @@ public class ShowClientInState extends HttpServlet {
                                 out.println("Choisissez votre etat : ");
                                 out.println("<form action=\"/ServerTest/ShowClientInState\">");
                                 out.println("<select name=\"state\">");
+                                
                                 for (int i = 0; i < dao.getAllStates().size(); i++) {
                                     String state = dao.getAllStates().get(i);
-                                    out.printf("<option value=\"%s\">%s</option>" ,state,state );
+                                    if (val.equals(state)){
+                                        out.printf("<option selected value=\"%s\">%s</option>" ,state,state );
+                                    }
+                                    else{
+                                        out.printf("<option value=\"%s\">%s</option>" ,state,state );
+                                    }
+                                    
+                                    
                                 }
                                 out.println("</select>");
+                                out.println("<INPUT TYPE=\"submit\" VALUE=\"Envoyé !\">");
                                 out.println("</form>");
+                                
 				// on doit convertir cette valeur en entier (attention aux exceptions !)
 				
 
